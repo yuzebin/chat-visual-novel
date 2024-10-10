@@ -8,9 +8,9 @@ export const CP_GITHUB_ASSETS = `${GITHUB_URL}/tree/master/src/assets/`;
 export const SITE_INTERNAL_HEADER_URL = "$$$x-url";
 export const SITE_INTERNAL_HEADER_PATHNAME = "$$$x-pathname";
 export const SITE_INTERNAL_HEADER_LOCALE = "$$$x-locale";
-export const CHAT_COMPLETION_URL = "https://api.openai.com/v1/chat/completions";
+export const CHAT_COMPLETION_URL = env("OPENAI_COMPLETION_URL");
 export const CHAT_COMPLETION_CONFIG = {
-  model: "gpt-3.5-turbo",
+  model: env("OPENAI_COMPLETION_MODEL"),
   temperature: 0.5,
   max_tokens: 150,
 };
